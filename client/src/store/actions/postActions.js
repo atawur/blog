@@ -24,11 +24,11 @@ export const savePost = (post, history) => dispatch => {
 export const allPost = (post, history) => dispatch => {
     dispatch(setLoadingState(true))
     Axios.get('http://127.0.0.1:8000/api/post', post)
-        .then((data) => {
-            //console.log('vvv',data)
+        .then((res) => {
+            //console.log('vvv',res.data.data)
             dispatch(setLoadingState(false))
             dispatch(catchError())
-            dispatch(setPost())
+            dispatch(setPost(res.data.dataList))
         })
         .catch(error => {
             dispatch(setLoadingState(false))

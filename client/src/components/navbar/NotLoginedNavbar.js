@@ -15,6 +15,11 @@ const NotLoginedNavbar = props => (
       </NavLink>
     </NavItem>
     <NavItem>
+      <NavLink tag={Link} to="/post">
+        All Post
+      </NavLink>
+    </NavItem>
+    <NavItem>
       <NavLink tag={Link} to="/login">
         Login
       </NavLink>

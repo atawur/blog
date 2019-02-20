@@ -11,7 +11,7 @@ import Users from "../pages/Users";
 import RegistrationSuccessful from "../pages/RegistrationSuccessful";
 import ActivationPage from "../pages/ActivationPage";
 import CreatePost from "../pages/CreatePost";
-import CreatePost from "../pages/Post";
+import Post from "../pages/Post";
 import TopNavbar from './navbar/TopNavbar'
 
 
