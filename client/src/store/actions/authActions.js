@@ -9,7 +9,8 @@ import setAuthToken from '../../utils/setAuthToken'
 export const register = (user, history) => dispatch => {
     dispatch(setLoadingState(true))
     Axios.post('http://127.0.0.1:8000/api/users/register', user)
-        .then(({data}) => {
+        .then((data) => {
+            console.log(data)
             dispatch(setLoadingState(false))
             dispatch(catchError())
             dispatch(setToastMessage(data.message))
@@ -17,7 +18,7 @@ export const register = (user, history) => dispatch => {
         })
         .catch(error => {
             dispatch(setLoadingState(false))
-            dispatch(catchError(error.response.data))
+            dispatch(catchError())
         })
 }
 
