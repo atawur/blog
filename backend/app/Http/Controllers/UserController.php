@@ -73,4 +73,8 @@
 
                     return response()->json(compact('user'));
             }
+
+            public function activateaccount(){
+                    
+            }
     }
