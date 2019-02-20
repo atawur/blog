@@ -35,8 +35,17 @@
             ]);
 
             if($validator->fails()){
-                    return response()->json($validator->errors()->toJson(), 400);
+                return response()->json([
+                        'status' => 'error',
+                        'msg'    => 'Error',
+                        'errors' => $validator->errors(),
+                    ], 400);
             }
+            return response()->json([
+                    'status' => 'error',
+                    'msg'    => 'Error',
+                    'errors' => $validator->errors(),
+                ], 400);
 
             $user = User::create([
                 'name' => $request->get('name'),

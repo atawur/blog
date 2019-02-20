@@ -47,16 +47,7 @@
 
         public function all_post(){
             $posts = Post::all();
-            //return json_encode($posts);
-            return response()->json([
-                'status' => 'success',
-                'msg'    => 'Success Fully Added',
-                'dataList' =>json_encode($posts),
-            ], 200);
+            return response()->json($posts,200);
         }
-        public function all_postbac(){
-            $query = DB::table('posts');
-            $result = $query->get();
-            return json_encode($result);
-        }
+        
     }

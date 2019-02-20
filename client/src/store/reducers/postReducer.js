@@ -2,16 +2,16 @@ import * as ActionTypes from '../actions/actionTypes'
 
 const init = {
     
-    allPost: {}
+    postsList: {posts:[]}
 }
 
 const postReducer = (state = init, action) => {
-    console.log(action)
+    console.log('action',action)
     switch (action.type) {
         case ActionTypes.SET_POST: {
             return {
-               
-                allPost: action.payload.post
+                ...state,
+                postsList: {posts:action.payload.data}
                
             }
         }

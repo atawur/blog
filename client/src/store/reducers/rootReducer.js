@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
     auth: authReducer,
     error: errorReducer,
     meta: metaReducer,
-    allPost:postReducer
+    postsList:postReducer
 })
 
 export default rootReducer

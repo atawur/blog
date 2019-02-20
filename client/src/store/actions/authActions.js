@@ -18,7 +18,7 @@ export const register = (user, history) => dispatch => {
         })
         .catch(error => {
             dispatch(setLoadingState(false))
-            dispatch(catchError())
+            dispatch(catchError(error.response.data.errors))
         })
 }
 
@@ -32,7 +32,7 @@ export const activateAccount = token => dispatch => {
         })
         .catch(error => {
             dispatch(setLoadingState(false))
-            dispatch(catchError(error.response.data))
+            dispatch(catchError(error.response.data.errors))
         })
 }
 
