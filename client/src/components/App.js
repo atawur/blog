@@ -10,7 +10,8 @@ import AnotherRegister from "../pages/AnotherRegister";
 import Users from "../pages/Users";
 import RegistrationSuccessful from "../pages/RegistrationSuccessful";
 import ActivationPage from "../pages/ActivationPage";
-
+import CreatePost from "../pages/CreatePost";
+import CreatePost from "../pages/Post";
 import TopNavbar from './navbar/TopNavbar'
 
 
@@ -28,6 +29,8 @@ class App extends Component {
             <Route path="/users" component={Users} />
             <Route path="/registration-success" component={RegistrationSuccessful} />
             <Route path="/activateaccount/:token" component={ActivationPage} />
+            <Route path="/create_post" component={CreatePost} />
+            <Route path="/post" component={Post} />
           </Switch>
         </Container>
       </BrowserRouter>

@@ -17,12 +17,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 ///api/users/register
-Route::post('api/users/register', 'UserController@register');
-Route::post('/api/users/login', 'UserController@authenticate');
+Route::post('/users/register', 'UserController@register');
+Route::post('/users/login', 'UserController@authenticate');
 Route::get('open', 'DataController@open');
-Route::get('/api/users/activateaccount', 'UserController@activateaccount');
-
-
+Route::get('/users/activateaccount', 'UserController@activateaccount');
+// routes for for post
+Route::post('/post/save_post', 'PostController@save_post');
+Route::get('/post', 'PostController@all_post');
 Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('user', 'UserController@getAuthenticatedUser');
     Route::get('closed', 'DataController@closed');
