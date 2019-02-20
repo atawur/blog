@@ -5,7 +5,7 @@ import { Container, Row, Col, Form, Button, Alert } from "reactstrap";
 import TextInput from "../components/forms/TextInput";
 import registerValidator from "../validators/registerValidator";
 import { register } from "../store/actions/authActions";
-
+//
 class AnotherRegister extends React.Component {
   state = {
     name: {
@@ -35,7 +35,7 @@ class AnotherRegister extends React.Component {
   //   }
   //   return null
   // }
-//
+
   changeHandler = event => {
     this.setState({
       [event.target.name]: {

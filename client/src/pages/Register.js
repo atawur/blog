@@ -5,7 +5,7 @@ import { Container, Row, Col, Form, Button, Alert } from "reactstrap";
 
 import TextInput from "../components/forms/TextInput";
 import { register } from "../store/actions/authActions";
-
+//
 class Register extends React.Component {
   state = {
     name: "",

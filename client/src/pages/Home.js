@@ -4,7 +4,7 @@ import { Container, Row, Col, Card, CardBody } from 'reactstrap'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import { setToastMessage } from '../store/actions/metaActions'
-
+//
 class Home extends React.Component {
     componentDidMount() {
         let { toastMessage } = this.props.meta

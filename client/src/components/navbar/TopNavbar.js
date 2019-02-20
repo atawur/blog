@@ -1,5 +1,4 @@
 import React from "react";
-//
 import {
   Collapse,
   Navbar,
@@ -10,7 +9,7 @@ import { connect } from 'react-redux'
 
 import LoginedNavbar from './LoginedNavbar'
 import NotLoginedNavbar from './NotLoginedNavbar'
-
+//
 class TopNavbar extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +28,7 @@ class TopNavbar extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">MERN Project</NavbarBrand>
+          <NavbarBrand href="/">Personal Blog</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             {this.props.auth.isAuthenticated ? <LoginedNavbar /> : <NotLoginedNavbar /> }

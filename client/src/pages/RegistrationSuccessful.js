@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import { setToastMessage } from '../store/actions/metaActions'
 
-
+//
 class RegistrationSuccessful extends React.Component{
 
     componentDidMount() {
